@@ -1,0 +1,33 @@
+{
+  "name": "codex-brake",
+  "version": "0.2.0",
+  "description": "Stop Codex when your weekly allowance resets.",
+  "type": "module",
+  "bin": {
+    "codex-brake": "bin/codex-brake.js",
+    "codex-resetstop": "bin/codex-brake.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "linux",
+    "darwin"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node --check bin/codex-brake.js && node --check src/proxy.js && node --check src/state.js && node --check src/detector.js && node --check src/install.js && node --check src/guarded-command.js && node --check src/environment.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "docs",
+    "assets/icon.svg"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonLovesDoggo/codex-brake.git"
+  }
+}
